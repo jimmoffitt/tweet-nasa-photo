@@ -26,6 +26,8 @@ import sys
 import requests
 import tweepy
 import shutil
+import os
+from dotenv import load_dotenv #python-dotenv package.
 ```
   
   

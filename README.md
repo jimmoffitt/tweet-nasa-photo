@@ -5,6 +5,13 @@ A super simple code that Tweets a photo downloaded from the NASA APOD API.
 https://apod.nasa.gov/apod/astropix.html
 
 
+## Running the script.
+
++ Clone the repository.
++ Create a .env file and fill in your private credentials. .env.example is provided as a template.
++ Update the Tweet message at the top of the tweet-nasa=photo.py code. 
++ Execute the script: c>python3 tweet-nasa-photo.py 
++ Go admire the NASA Astronomy Photo of the Day on your Timeline. 
 
 ## Dependencies
 - Python (recommended >= 3.6 for f-string support)
@@ -26,19 +33,17 @@ import shutil
 Create a file named ".env" at the root of the repository directory with the relevant credentials (see '.env.example'). Here's the example '.env' for reference:
 
 ```
-# Account creds for PowerTrack, Historical PowerTrack, and Search API
-USERNAME=""
-PASSWORD=""
-ACCOUNT_NAME=""
-POWERTRACK_LABEL=""
-SEARCH_LABEL=""
-
-# Twitter app creds for Engagement API
+# Twitter app creds for app uploading and posting Tweets. 
 TWITTER_CONSUMER_KEY=""
 TWITTER_CONSUMER_SECRET=""
 TWITTER_ACCESS_TOKEN=""
 TWITTER_ACCESS_TOKEN_SECRET=""
-TWITTER_BEARER_TOKEN=""
+
+#NASA API details
+NASA_KEY=""
+NASA_API="f"https://api.nasa.gov/planetary/apod?api_key={nasa_key}" #https://apod.nasa.gov/apod/astropix.html"
+
+#Bot details
+PHOTO_FILENAME="current.jpg"
 ```
 
-Note: The Engagement-API/generate_bearer_token.py script can be used to generate a bearer token. You can then store that returned value in the '.env' file as shown above.

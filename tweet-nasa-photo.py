@@ -15,7 +15,6 @@ nasa_api = f"https://api.nasa.gov/planetary/apod?api_key={nasa_key}"
 photo_filename = 'nasa_apod.jpg'
 tweet_message = ' ✨ NASA Astronomy Picture of the Day from a 40-line Python script. ✨'
 
-
 # OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -30,7 +29,7 @@ photo_url = data['url']
 
 # Download file
 response = requests.get(photo_url, stream=True)
-with open('nasa_apod.jpg', 'wb') as out_file:
+with open(photo_filename, 'wb') as out_file:
     shutil.copyfileobj(response.raw, out_file)
 del response
 

@@ -3,16 +3,20 @@ import requests
 import tweepy
 import shutil
 
-# Consumer keys and access tokens, used for OAuth
-consumer_key = os.getenv("consumer_key")
-consumer_secret =  os.getenv("consumer_secret")
-access_token = ''
-access_token_secret = ''
-nasa_key = ''
+# Twitter API details. Consumer keys and access tokens, used for OAuth.
+consumer_key = os.getenv("TWITTER_CONSUMER_KEY")
+consumer_secret =  os.getenv("TWITTER_CONSUMER_SECRET")
+access_token = os.getenv("TWITTER_ACCESS_TOKEN")
+access_token_secret = os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
 
-#https://apod.nasa.gov/apod/astropix.html
-nasa_api = f"https://api.nasa.gov/planetary/apod?api_key={nasa_key}"
-photo_filename = 'nasa_apod.jpg'
+# NASA API details
+nasa_key = os.getenv("NASA_KEY")
+nasa_api = os.getenv("NASA_API"
+
+#Bot details
+photo_filename = os.getenv("PHOTO_FILENAME")
+
+
 tweet_message = ' ✨ NASA Astronomy Picture of the Day from a 40-line Python script. ✨'
 
 # OAuth process, using the keys and tokens

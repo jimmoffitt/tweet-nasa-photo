@@ -9,9 +9,11 @@ consumer_secret =  os.getenv("consumer_secret")
 access_token = ''
 access_token_secret = ''
 nasa_key = ''
+
+#https://apod.nasa.gov/apod/astropix.html
 nasa_api = f"https://api.nasa.gov/planetary/apod?api_key={nasa_key}"
 photo_filename = 'nasa_apod.jpg'
-tweet_message = 'NASA Astrono ✨'
+tweet_message = ' ✨ NASA Astronomy Picture of the Day from a 40-line Python script. ✨'
 
 
 # OAuth process, using the keys and tokens

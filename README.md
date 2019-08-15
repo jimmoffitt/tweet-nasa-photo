@@ -1,4 +1,4 @@
-# Tweet Nasa Photo
+# Tweet NASA Photo
 
 A super simple Python script that Tweets a photo downloaded from the NASA APOD API. 
 

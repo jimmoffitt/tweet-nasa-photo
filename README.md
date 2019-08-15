@@ -1,15 +1,16 @@
 # Tweet Nasa Photo
 
-A super simple code that Tweets a photo downloaded from the NASA APOD API. 
+A super simple Python script that Tweets a photo downloaded from the NASA APOD API. 
 
 https://apod.nasa.gov/apod/astropix.html
 
 
 ## Running the script.
 
-+ Clone the repository.
++ Clone the repository. 
++ Run `pip install requirements.txt` to install the third-party library dependenices.
 + Create a .env file and fill in your private credentials. .env.example is provided as a template.
-+ Update the Tweet message at the top of the tweet-nasa=photo.py code. 
++ Update the Tweet message at the top of the tweet-nasa-photo.py code. 
 + Execute the script: c>python3 tweet-nasa-photo.py 
 + Go admire the NASA Astronomy Photo of the Day on your Timeline. 
 
@@ -17,8 +18,9 @@ https://apod.nasa.gov/apod/astropix.html
 - Python (recommended >= 3.6 for f-string support)
 - Tweepy - Python wrapper for Twitter APIs
   - Provides methods for:
-    - Uploading media to Twitter in 'chunks'
+    - Uploading media to Twitter in 'chunks'.
     - Post Tweets with media. 
+- .env configuration functionality based on `python-dotenv` package.
     
 
 ```python

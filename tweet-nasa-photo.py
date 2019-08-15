@@ -55,4 +55,5 @@ for filename in filenames:
      media_ids.append(res.media_id)
 
 # tweet with multiple images
+print (f"Tweeting: {tweet_message}"
 api.update_status(status=tweet_message, media_ids=media_ids)

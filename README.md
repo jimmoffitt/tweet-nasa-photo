@@ -4,8 +4,13 @@ A super simple Python script that Tweets a photo downloaded from the NASA APOD A
 
 https://apod.nasa.gov/apod/astropix.html
 
+## Get access to APIs:
+
++ Get a Twitter Developer account, create and a Twitter app and reference the "consumer" tokens: https://developer.twitter.com/en/account/get-started
++ Start here and get your NASA API Key: https://api.nasa.gov/
 
 ## Running the script.
+This script was put together without support for command-line arguments. 
 
 + Clone the repository. 
 + Run `pip install requirements.txt` to install the third-party library dependenices.

@@ -20,7 +20,7 @@ nasa_url = f"{nasa_api}?api_key={nasa_key}"
 
 #Bot details
 media_filename = os.getenv("PHOTO_FILENAME")
-tweet_message = ' ✨ Tweeting the NASA Astronomy Picture of the Day from an example Python script. #TapIntoTwitter ✨'
+tweet_message = ' ✨ Tweeting the NASA Astronomy Picture of the Day from an example Python script. @TwitterDev #TapIntoTwitter ✨'
 
 # OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -61,9 +61,8 @@ if media_url.endswith('jpg') or media_url.endswith('png'):
         res = api.media_upload(filename)
         media_ids.append(res.media_id)
 else:
-    print ("It's movie time")
     native_media = False
-    tweet_message = tweet_message + "#{media_url}"
+    tweet_message = "It's time for a video! " + tweet_message + f"{media_url}"
 
 if native_media:
     print ('Posting Tweet with media...')
